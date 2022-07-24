@@ -1,0 +1,31 @@
+@import '../styles.css';
+
+.nav {
+  background-color: var(--nav_background);
+}
+
+.nav_text {
+  width: 100%;
+  font-size: 24px;
+  color: var(--text_color);
+  cursor: pointer !important;
+}
+
+.nav_text span {
+  font-size: 16px;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 770px) {
+  .nav {
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+    font-size: 32px;
+    background: none;
+  }
+}

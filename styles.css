@@ -1,0 +1,42 @@
+
+@import './header/header.css';
+
+:root {
+  --text_color: #513252;
+  --nav_background: #f8f9fa
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Dancing Script !important;
+  color: var(--text_color) !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: currentColor !important;
+}
+
+#background_image {
+  width: 100%;
+  height: 100%;
+  background-image: url(./Images/cover.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0.62;
+  position: fixed;
+  z-index: -200;
+}
+
+@media screen and (min-width: 770px) {
+  #background_image {
+    background-size: cover;
+    background-position: 0 -300px;
+  }
+}
