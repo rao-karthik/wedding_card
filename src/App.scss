@@ -25,6 +25,13 @@
 
   @media screen and (min-width: 770px) {
     background-size: cover;
+    background-position: 0 -200px;
+    background-image: url('./Images/cover1.JPG');
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-size: cover;
     background-position: 0 -300px;
+    background-image: url('./Images/cover1.JPG');
   }
 }
