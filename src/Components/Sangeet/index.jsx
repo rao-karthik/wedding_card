@@ -7,7 +7,7 @@ import map from '../../Images/map.png';
 
 const Sangeet = () => {
   const goToLoc = () => {
-    window.open(map_location.sangeet, '_self');
+    window.open(map_location.home, '_self');
   };
 
   return (
@@ -19,8 +19,8 @@ const Sangeet = () => {
           <p>at</p>
         </div>
         <div className='address'>
-          Agarwal Dhramshala, Ward 10, Near Santoshi Mata Temple, Pataudi,
-          Distt. Gurugram, Haryana
+          At our residence <br />
+          at 2PM
         </div>
       </div>
       <div className='map' onClick={goToLoc}>
@@ -28,7 +28,7 @@ const Sangeet = () => {
         <div>
           <img src={map} className='map_img' alt='' />
         </div>
-        <p>Venue</p>
+        <p>Home</p>
       </div>
     </>
   );

@@ -23,6 +23,8 @@ const carousel = (slider) => {
   slider.on('detailsChanged', rotate);
 };
 
+const animation = { duration: 90000, easing: (t) => t };
+
 const Carousel = (props) => {
   const { children } = props;
 
@@ -32,13 +34,22 @@ const Carousel = (props) => {
       selector: '.carousel__cell',
       renderMode: 'custom',
       mode: 'free-snap',
+      created(s) {
+        s.moveToIdx(5, true, animation);
+      },
+      updated(s) {
+        s.moveToIdx(s.track.details.abs + 5, true, animation);
+      },
+      animationEnded(s) {
+        s.moveToIdx(s.track.details.abs + 5, true, animation);
+      },
     },
     [carousel]
   );
 
   return (
     <div className='wrapper'>
-      <div className='scene'>
+      <div className='scene' style={{ height: window.innerHeight }}>
         <div className='carousel' ref={sliderRef}>
           {children}
           <div className='carousel__cell'>
