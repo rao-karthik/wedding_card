@@ -20,7 +20,8 @@ const Lagan = () => {
         </div>
         <div className='address'>
           Parth Palace, <br /> Opposite Union Bank of India, Near new Anaj
-          Mandi, Haily Mandi, Distt. Gurugram, Haryana
+          Mandi, Haily Mandi, Distt. Gurugram, Haryana <br />
+          at 4PM
         </div>
       </div>
       <div className='map' onClick={goToLoc}>

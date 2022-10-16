@@ -23,8 +23,9 @@ const Baraat = () => {
           <p>Depart From</p>
         </div>
         <div className='address'>
-          H.No.136, Ward No.10, Near Santoshi Mata Temple, Pataudi, Distt.
-          Gurugram, Haryana
+          Ward No.10, Near Santoshi Mata Temple, Pataudi, Distt.
+          Gurugram, Haryana <br />
+          at 04:15PM
         </div>
 
         <div className='other_details'>

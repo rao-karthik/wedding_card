@@ -16,7 +16,7 @@ const index = () => {
         <div className='imp_details'>
           <p>Kartik</p>
           <p>weds</p>
-          <p>Ruby (Komal)</p>
+          <p>Ruby</p>
         </div>
         <div className='other_details'>
           <p>(03-12-2022)</p>
