@@ -20,7 +20,7 @@ const Sangeet = () => {
         </div>
         <div className='address'>
           At our residence <br />
-          at 2PM
+          at 4PM
         </div>
         <div className='title' style={{marginTop: '40px'}}>Chak Bhat</div>
         <div className='other_details'>
@@ -28,7 +28,7 @@ const Sangeet = () => {
           <p>at</p>
         </div>
         <div className='address'>
-          at 4PM
+          at 5PM
         </div>
       </div>
       <div className='map' onClick={goToLoc}>
