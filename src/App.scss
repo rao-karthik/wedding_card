@@ -24,7 +24,7 @@ $screen_size: 600px;
   background-image: url('./Images/cover.JPG');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  opacity: 0.62;
+  opacity: 0.75;
   position: fixed;
   z-index: -200;
   top: 0;
@@ -40,6 +40,11 @@ $screen_size: 600px;
     background-position: 0 -300px;
     background-image: url('./Images/cover1.JPG');
   }
+}
+
+.frame_background {
+  background-color: #894355;
+  background-image: url('./Images/frame.png');
 }
 
 .mobile_app {
