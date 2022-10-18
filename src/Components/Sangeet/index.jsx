@@ -2,7 +2,7 @@ import React from 'react';
 
 import { map_location } from '../constants';
 
-import map from '../../Images/map.png';
+import map from '../../Images/loc.png';
 
 const Sangeet = () => {
   const goToLoc = () => {
