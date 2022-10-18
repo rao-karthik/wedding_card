@@ -56,16 +56,16 @@ const Carousel = (props) => {
             <div className='background_image'></div>
             <Home />
           </div>
-          <div className='carousel__cell'>
-            <div className='background_image'></div>
+          <div className='carousel__cell' style={{color: '#fff'}}>
+            <div className='background_image frame_background'></div>
             <Lagan />
           </div>
-          <div className='carousel__cell'>
-            <div className='background_image'></div>
+          <div className='carousel__cell' style={{color: '#fff'}}>
+            <div className='background_image frame_background'></div>
             <Sangeet />
           </div>
-          <div className='carousel__cell'>
-            <div className='background_image'></div>
+          <div className='carousel__cell' style={{color: '#fff'}}>
+            <div className='background_image frame_background'></div>
             <Baraat />
           </div>
         </div>

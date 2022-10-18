@@ -2,7 +2,6 @@ import React from 'react';
 
 import { map_location } from '../constants';
 
-import locGif from '../../Images/loc_gif.gif';
 import map from '../../Images/map.png';
 
 const Baraat = () => {
@@ -16,15 +15,15 @@ const Baraat = () => {
   return (
     <>
       {' '}
-      <div className='main_container'>
+      <div className='main_container main_other '>
         <div className='title'>Baraat</div>
         <div className='other_details'>
           <p>(03-12-2022)</p>
           <p>Depart From</p>
         </div>
         <div className='address'>
-          Ward No.10, Near Santoshi Mata Temple, Pataudi, Distt.
-          Gurugram, Haryana <br />
+          Ward No.10, Near Santoshi Mata Temple, Pataudi, Distt. Gurugram,
+          Haryana <br />
           at 04:15PM
         </div>
 
@@ -35,20 +34,22 @@ const Baraat = () => {
         <div className='address'>
           Ward 12, Naharpur Ki Dhani, FarrukhNagar, Distt. Gurugram, Haryana
         </div>
-      </div>
-      <div className='map' onClick={goToLoc}>
-        <img src={locGif} className='location' alt='' />
-        <div>
-          <img src={map} className='map_img' alt='' />
+
+        <div className='map' style={{justifyContent: 'space-between'}}>
+          <div onClick={goToHome}>
+            <div>
+              <img src={map} className='map_img' alt='' />
+            </div>
+            <p>Home</p>
+          </div>
+
+          <div onClick={goToLoc}>
+            <div>
+              <img src={map} className='map_img' alt='' />
+            </div>
+            <p>Venue</p>
+          </div>
         </div>
-        <p>Venue</p>
-      </div>
-      <div className='home_loc' onClick={goToHome}>
-        <img src={locGif} className='location' alt='' />
-        <div>
-          <img src={map} className='map_img' alt='' />
-        </div>
-        <p>Home</p>
       </div>
     </>
   );

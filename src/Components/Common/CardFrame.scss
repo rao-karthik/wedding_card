@@ -1,0 +1,62 @@
+$pi: 3.141592653589793238;
+
+$n: 7;
+$dia: 5em;
+$b: .375em;
+$r: calc($b / 2);
+$ro: 50%;
+$rm: calc(50% - #{$r});
+$ri: calc(50% - #{$b});
+
+@function points($n, $fn-name, $fn-args) {
+	$ua: calc(2 * $pi / $n);
+	$list: ();
+	$x0: 100%;
+	$y0: 50%;
+	
+	@for $i from 0 to $n {
+		$list: $list, call(get-function($fn-name), $ua, $i, $fn-args...), $x0 $y0
+	}
+	
+	@return $list
+}
+
+@function rhombus($ua, $i) {
+	$a0: $i*$ua;
+	$a1: $a0 + .5*$ua;
+	$a2: $a0 + $ua;
+	$list: ();
+	
+	
+	@return $list, 
+		calc(50% + #{$ro} * #{cos($a1)}) calc(50% + #{$ro} * #{sin($a1)}), 
+		calc(50% + #{$rm} * #{cos($a2)}) calc(50% + #{$rm} * #{sin($a2)}), 
+		calc(50% + #{$ri} * #{cos($a1)}) calc(50% + #{$ri} * #{sin($a1)}), 
+		calc(50% + #{$rm} * #{cos($a0)}) calc(50% + #{$rm} * #{sin($a0)}),
+    calc(50% + #{$ro} * #{cos($a1)}) calc(50% + #{$ro} * #{sin($a1)}), 
+  }
+
+.card-frame-wrapper {
+  .circ {
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    position: relative;
+    // margin: $m;
+    padding-left: .25em;
+    width: $dia; height: $dia;
+    border-radius: 50%;
+    filter: drop-shadow(1px 1px #fff);
+    
+    &::after {
+      position: absolute;
+      // top: $o; right: $o; bottom: $o; left: $o;
+      background: inherit;
+      content: ''
+    }
+  }
+
+  .circ:nth-of-type(1)::after {
+    clip-path: polygon(#{points(36, rhombus, ())})
+  }
+}
